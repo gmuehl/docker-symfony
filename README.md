@@ -17,7 +17,11 @@ This Config is only for Development!
 
 This project just started, but soon it should have
 
-- NGINX
-- PHP 7.3 with X-Debug
-- MariaDB
-- Postfix
+- Install NGINX
+- Install PHP 7.3 with X-Debug
+- Install MariaDB
+- Install Postfix
+
+### Next Step:
+
+- Install NGINX
