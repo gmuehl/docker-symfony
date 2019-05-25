@@ -17,14 +17,14 @@ This Config is only for Development!
 
 This project just started, but soon it should have
 
-- Install PHP 7.3 with X-Debug
-- NGINX uses PHP
 - Install MariaDB
 - Install Postfix
+- Install and use X-Debug
+- Install and use Adminer
 
 ### Next Step:
 
-- Install PHP
+- Install MariaDB
 
 ### Resources
 
