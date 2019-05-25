@@ -18,13 +18,12 @@ This Config is only for Development!
 
 This project just started, but soon it should have
 
-- Install and use Adminer
-- Install Postfix
-- Install and use X-Debug
+- Install Postfix and make sure Symfony can send Mail
+- Install X-Debug and make it available for PHPStorm
 
 ### Next Step:
 
-- Install Adminer
+- Get Symfony Running
 
 ### Resources
 
