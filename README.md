@@ -11,20 +11,20 @@ but i wanted:
 
 Do **not** Use this Configuration for Production 
 and take care what you deploy!
+
 This Config is only for Development!
 
 ## TODO:
 
 This project just started, but soon it should have
 
-- Install MariaDB
+- Install and use Adminer
 - Install Postfix
 - Install and use X-Debug
-- Install and use Adminer
 
 ### Next Step:
 
-- Install MariaDB
+- Install Adminer
 
 ### Resources
 

@@ -1,5 +1,19 @@
 version: '3.7'
 services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./var/docker/mysql:/var/lib/mysql
+    command:
+      - "--default-authentication-plugin=mysql_native_password"
+      - "--lower_case_table_names=1"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
   php:
     build:
       context: ./var/docker/php7-fpm
@@ -7,6 +21,8 @@ services:
       - "9000:9001"
     volumes:
       - .:/var/www/symfony:cached
+    links:
+      - db
   nginx:
     build: ./var/docker/nginx
     ports:
