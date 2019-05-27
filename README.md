@@ -23,12 +23,4 @@ This project just started, but soon it should have
 
 ### Next Step:
 
-- Get Symfony Running
-
-### Resources
-
-- https://blog.rafalmuszynski.pl/how-to-configure-docker-for-symfony-4-applications/
-- https://github.com/maxpou/docker-symfony
-- https://github.com/eko/docker-symfony
-- https://medium.com/@romaricp/the-perfect-kit-starter-for-a-symfony-4-project-with-docker-and-php-7-2-fda447b6bca1
-- https://knplabs.com/en/blog/how-to-dockerise-a-symfony-4-project
+- Install Postfix and make sure Symfony can send Mail
