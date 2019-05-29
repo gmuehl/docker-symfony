@@ -32,11 +32,20 @@ RUN apk add --update --no-cache \
     make \
     curl
 
-RUN echo 'alias sf="php bin/console"' >> ~/.bashrc
+RUN apk add --update --no-cache \
+    ca-certificates \
+    msmtp
+
+RUN apk add --update --no-cache \
+    bash
+
+RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
+RUN ln -sf /usr/bin/msmtp /usr/sbin/sendmail
 
 COPY symfony.ini /etc/php7/conf.d/
 COPY symfony.ini /etc/php7/cli/conf.d/
 COPY symfony.pool.conf /etc/php7/php-fpm.d/
+COPY msmtprc /etc/
 
 CMD ["php-fpm7", "-F"]
 

@@ -12,15 +12,39 @@ but i wanted:
 Do **not** Use this Configuration for Production 
 and take care what you deploy!
 
-This Config is only for Development!
-
 ## TODO:
 
-This project just started, but soon it should have
-
-- Install Postfix and make sure Symfony can send Mail
 - Install X-Debug and make it available for PHPStorm
+- Fill PHPSTORM.md
 
-### Next Step:
+### Mail under Symfony 3.x
 
-- Install Postfix and make sure Symfony can send Mail
+First of all add your Credentials to *msmtprc*. It is very tricky to get 
+the local Mail up and running. Make pretty sure that your local Symfony 
+uses this Configuration:
+
+``` yaml
+# Swiftmailer Configuration
+swiftmailer:
+    transport: 'sendmail'
+
+services:
+    swiftmailer.mailer.default.transport:
+        class:     Swift_SendmailTransport
+        arguments: ['/usr/sbin/sendmail -t']
+```
+
+Take care that you have **not** added 
+
+``` yaml
+swiftmailer:
+    spool: { type: memory }
+```
+
+in your *config.yml* because you can't override it *in config_dev.yml* - instead move 
+a maybe existing spooling Configuration to *config_prod.yml*
+
+Even if you have everything configured right it could still be possible that your
+Provider refuses the mail (check msmtp.log). In most Cases it's a not allowed
+From-Email-Address. So make sure your Code uses the right one or make it
+configurable!
