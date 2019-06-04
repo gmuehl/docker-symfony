@@ -61,4 +61,17 @@ https://www.jetbrains.com/help/phpstorm/docker.html
 
 # Running Symfony Console
 
-TODO
+Best way is to open a Console Window as usual. 
+The *Comand Line Tool Support* of PhpStorm will not work anymore!
+
+To achieve this Start the Containers and Open the PphpStorm Docker Window.
+At the left there is a list of all 4 Services you have started, and the
+custom names they have got. Right-Click on the Custom Name for the *PHP* Container
+and a
+Menu will Popup - choose *exec* within this Menu. Now a Popup shows
+up, just click on Create. In the input line just put **bash**.
+PhpStorm will directly open a Terminal! Next time you open the Menu
+you can directly click on bash.
+
+Second way to achieve this is to open a Terminal and start **docker-compose exec php bash**.
+
