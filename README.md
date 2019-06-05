@@ -15,7 +15,7 @@ and take care what you deploy!
 ## TODO:
 
 - Install X-Debug and make it available for PHPStorm
-- Fill PHPSTORM.md
+- Use Code Sniffer with Remote Interpreter in Docker Container
 
 ### Mail under Symfony 3.x
 
