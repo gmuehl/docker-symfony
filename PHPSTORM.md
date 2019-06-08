@@ -59,7 +59,51 @@ For further Information go to
 
 https://www.jetbrains.com/help/phpstorm/docker.html
 
-# Running Symfony Console
+## Remote PHP Interpreter
+
+For using X-Debug (and not having PHP on your local Machine) you must have defined PHP
+as Remote Interpreter in PHPStorm. To achieve this go to Settings and click
+
+```
+Languages & Frameworks
+PHP
+```
+
+Once there set the right PHP Version in "PHP Language Level".
+Then Press **...** right after "CLI Interpreter". A new Dialog opens,
+just press the Plus-Button at the upper left. A Select Button appers,
+just Press "Prom Docker...". A new Dialog appers, first of all
+choose "Docker Compose" and the right Service (PHP). After pressing
+OK PhpStorm does some magic and the Remote Interpreter should appear.
+
+## Using Xdebug in PhpStorm
+
+Before you can start *Listening* in PhpStorm you have to enable Xdebug in the Settings.
+
+```
+Languages & Frameworks
+PHP
+Debug
+```
+
+Look at the Xdebug Section and make sure it is using Port 9000. All Checkboxes in this Section
+should be checked. When debugging usually PhpStorms sends warnings tht i cn't find the
+remote Scripts locally. So you habe to add a Server and Path Mappings in
+
+```
+Languages & Frameworks
+PHP
+Servers
+```
+
+Press the Plus Button at the upper left and add **localhost** on Port 80 as Server. 
+Make sure that Xdebug is configures as Debugger and enable Path Mappings.
+In the Path Mappings create a Mapping from your local Application Directory
+to */var/www/symfony*.
+
+**TODO: Check in a new Project that this is really working without the Xdebug Helper in Chrome.**
+
+## Running Symfony Console
 
 Best way is to open a Console Window as usual. 
 The *Comand Line Tool Support* of PhpStorm will not work anymore!

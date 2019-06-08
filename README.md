@@ -12,10 +12,10 @@ but i wanted:
 Do **not** Use this Configuration for Production 
 and take care what you deploy!
 
-## TODO:
+### Xdebug
 
-- Install X-Debug and make it available for PHPStorm
-- Use Code Sniffer with Remote Interpreter in Docker Container
+Before starting the Containers make sur that you have change the IP
+in *php7-fpm/xdebug.ini* to your local  machine.
 
 ### Mail under Symfony 3.x
 

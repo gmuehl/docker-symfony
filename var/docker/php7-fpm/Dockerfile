@@ -44,10 +44,15 @@ RUN ln -sf /usr/bin/msmtp /usr/sbin/sendmail
 
 COPY symfony.ini /etc/php7/conf.d/
 COPY symfony.ini /etc/php7/cli/conf.d/
+COPY xdebug.ini /etc/php7/conf.d/
+# Uncomment the next Line if you want to enable Xdebug in PHP CLI
+# COPY xdebug.ini /etc/php7/cli/conf.d/
 COPY symfony.pool.conf /etc/php7/php-fpm.d/
 COPY msmtprc /etc/
 
-CMD ["php-fpm7", "-F"]
+RUN touch /var/log/xdebug.log
+RUN chmod 777 /var/log/xdebug.log
 
 WORKDIR /var/www/symfony
-EXPOSE 9001
+
+CMD ["php-fpm7", "-F"]

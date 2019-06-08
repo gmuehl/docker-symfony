@@ -22,8 +22,6 @@ services:
   php:
     build:
       context: ./var/docker/php7-fpm
-    ports:
-      - "9000:9001"
     volumes:
       - .:/var/www/symfony:cached
     links:
