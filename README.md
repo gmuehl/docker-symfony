@@ -48,3 +48,10 @@ Even if you have everything configured right it could still be possible that you
 Provider refuses the mail (check msmtp.log). In most Cases it's a not allowed
 From-Email-Address. So make sure your Code uses the right one or make it
 configurable!
+
+## TODO
+
+- Make sure that the Xdebug Configuration works in a second Project :D
+- Make sure that Debugging in PhpStorm works without the Xdebug Helper in Browser
+- Add Composer to the PHP Container
+- Add Node & Yarn to the PHP Container
